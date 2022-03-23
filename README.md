@@ -9,9 +9,7 @@
  **官网演示** ：[https://cnm.sb](https://cnm.sb)
 
  **部分演示图** 
-![演示图1](READMEIMG/cnm1.jpg)
-![演示图2](READMEIMG/cnm2.jpg)
-![演示图3](READMEIMG/cnm3.jpg)
+演示图请到gitee查看，或访问官网演示进行体验
 
 
 #### 安装教程
