@@ -1,0 +1,71 @@
+@charset "utf-8";
+html,body{
+    height: 100%;
+}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td, figure {
+    margin: 0;
+    padding: 0;
+    font-family: "lucida Grande",Verdana;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+fieldset, img, iframe {
+    border: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+ol, ul {
+    list-style: none;
+}
+caption, th {
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+}
+sup {
+    vertical-align: text-top;
+}
+sub {
+    vertical-align: text-bottom;
+}
+address, caption, cite, code, dfn, em, strong, th, var, b, i {
+    font-style: normal;
+    font-weight: normal;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+a:active {
+    color: #333;
+}
+
+input, textarea, select, button {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+input, textarea, select {
+    outline: none;
+    *font-size: 100%;
+}
+input, select {
+    vertical-align: middle;
+}
+legend {
+    color: #333;
+}
+textarea {
+    resize: none;
+}
+img,a img {
+    display: block;
+    border: 0;
+}

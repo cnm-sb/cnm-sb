@@ -1,0 +1,864 @@
+body {
+    background-color: #edeef0;
+}
+
+.iconfont {
+    font-size: 0.6rem !important;
+}
+
+.container {
+    display: flex;
+    padding-top: 0.2rem;
+}
+
+.cnmsb {
+    display: none !important;
+}
+
+.left {
+    width: 20%;
+    height: 98%;
+    background: #dbdbdb;
+    border-radius: 4px;
+    padding: 0.1rem 0.3rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0.2rem;
+}
+
+.cnmsb-rolling {
+    height: 17rem;
+    overflow: auto;
+}
+
+.cnmsb-rolling::-webkit-scrollbar {
+    display: none;
+!important; /* Chrome Safari */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+.left-title h3 {
+    font-size: 0.3rem;
+    text-align: center;
+    color: rgba(102, 100, 100, 0.73);
+}
+
+.avatar {
+    width: 1.3rem;
+    height: 1.3rem;
+    margin-top: .3rem;
+    border: 0.05rem solid #5a64c7;
+    border-radius: 50%;
+
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.left li {
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: #fff;
+    margin-top: .3rem;
+    border-radius: 0.2rem;
+    box-shadow: 2px 2px 5px #e4e4e4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+li em {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    width: 0.3rem;
+    height: 0.3rem;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background-color: #0499ff;
+    /*background-color: #ff0000;*/
+
+}
+
+.aixin {
+    padding: 0.2rem;
+    box-sizing: border-box;
+}
+
+.left li img {
+    width: 100%;
+    height: 100%;
+}
+
+.left li i {
+    color: #666;
+}
+
+.container .left li:hover {
+    width: 1.1rem;
+    height: 1.1rem;
+    border: .08rem #0499ff solid;
+}
+
+.left .l-btn-active {
+    width: 1.1rem;
+    height: 1.1rem;
+    border: .08rem #0499ff solid;
+}
+
+.h {
+    border: 1px #e4e4e4 solid;
+    margin-top: .2rem;
+}
+
+.left .li-bg {
+    background-color: rgba(253, 101, 124, 0.84);
+}
+
+.left .li-bg2 {
+    background-color: rgba(55, 198, 238, 0.84);
+}
+
+.left .li-bg3 {
+    background-color: rgba(242, 175, 70, 0.84);
+}
+
+.left .li-bg4 {
+    background-color: rgba(33, 203, 54, 0.84);
+}
+
+.left .li-bg5 {
+    background-color: rgba(196, 150, 225, 0.84);
+}
+
+.left .li-bg6 {
+    background-color: rgba(88, 221, 243, 0.84);
+}
+
+.search-color {
+    font-weight: 600;
+}
+
+.right {
+    width: 80%;
+    min-height: 17rem;
+    overflow: auto;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 2rem;
+}
+
+.search-box {
+    width: 100%;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+
+.search-box input {
+    width: 90%;
+    height: 1rem;
+    background-color: #e4e4e4;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.4rem;
+    padding: 0 1.5rem 0 0.8rem;
+    box-sizing: border-box;
+    color: #999;
+}
+
+.search-box .postion-serarch {
+    position: absolute;
+    top: 0.55rem;
+    left: 0.6rem;
+    font-size: 0.42rem !important;
+    color: #9a9999;
+}
+
+.search-btn {
+    font-size: 0.4rem;
+    color: #49b9ff;
+    width: 1.2rem;
+    position: absolute;
+    right: 0.5rem;
+    border-left: 1px #ccc solid !important;
+    text-align: center;
+}
+
+/*首页代码*/
+.cnmsb-main {
+    position: relative;
+    display: flex;
+    height: 90vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.cnmsb-main .cnmsb-box {
+    width: 100%;
+    max-width: 800px;
+    background-color: #fff;
+    padding: 2px;
+    box-shadow: 0 1px 3px rgba(18, 18, 18, 0.1);
+    border-radius: 5px;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-head {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-head .cnmsb-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    transition: all 0.2s;
+    border: 0px solid #fff;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-head .cnmsb-sign {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    width: 25px;
+    height: 25px;
+    background-color: #6371bc;
+    border: 2px solid #fff;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-head .cnmsb-sign span {
+    font-size: 12px;
+    color: #fff;
+    opacity: 0;
+    word-break: keep-all;
+    overflow: hidden;
+    cursor: default;
+    transition: all 0.3s;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-head:hover .cnmsb-picture {
+    border: 2.5px solid #6371bc;
+    transform: scale(0.9);
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-head:hover .cnmsb-sign {
+    width: 135px;
+    right: -18px;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-head:hover .cnmsb-sign span {
+    opacity: 1;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-name h1 {
+    margin: 0 5px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #646464;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-name h1 a {
+    color: #646464;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-name .hr2 {
+    width: 100%;
+    height: 3px;
+    margin: 5px 0;
+    background: linear-gradient(to right, #a8b1de, #5f6790);
+    border-radius: 3px;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-info .cnmsb-label {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #424242c4;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-link {
+    margin: 5px 0;
+    padding: 0 55px;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-link ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-link ul li {
+    width: 16.666%;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-link ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 5px;
+    color: #8590a6;
+    transition: all 0.2s;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-link ul li a .iconfont {
+    font-size: 25px;
+    margin-right: 10px;
+    color: #8590a6;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-link ul li a span {
+    font-size: 0px;
+    font-weight: 600;
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-link ul li a:hover {
+    background-color: #eee;
+    color: #6371bc;
+    transform: scale(0.9);
+}
+
+.cnmsb-main .cnmsb-box .cnmsb-link ul li a:hover .iconfont {
+    color: #6371bc;
+}
+
+@media (max-width: 768px) {
+    .cnmsb-main .cnmsb-box .cnmsb-link ul li {
+        width: 50%;
+    }
+}
+
+.cnmsb-main .cnmsb-footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(102, 102, 102, 0.589);
+    padding: 20px 0;
+}
+
+.cnmsb-main .cnmsb-footer {
+    font-size: 12px;
+}
+
+.cnmsb-main .cnmsb-footer a {
+    color: rgba(187, 161, 161, 0.59);
+}
+
+@media (max-width: 500px) {
+    body {
+        background-color: #fff;
+    }
+
+    .cnmsb-main {
+        display: block;
+    }
+
+    .cnmsb-main .cnmsb-box {
+        width: 98%;
+        box-shadow: none;
+    }
+
+    .cnmsb-main .cnmsb-box .cnmsb-info .head .sign {
+        width: 130px;
+        right: -15px;
+        bottom: -5px;
+    }
+
+    .cnmsb-main .cnmsb-box .cnmsb-info .head .sign span {
+        opacity: 1;
+    }
+
+    .cnmsb-main .cnmsb-box .cnmsb-link ul li {
+        width: 100%;
+    }
+
+    .cnmsb-main .cnmsb-box .cnmsb-link ul li a {
+        height: 45px;
+        justify-content: unset;
+        padding-left: 30px;
+    }
+
+    .cnmsb-main .cnmsb-box .cnmsb-link ul li a .iconfont {
+        font-size: 35px;
+        width: 35px;
+        margin-right: 35px;
+    }
+
+    .cnmsb-main .cnmsb-box .cnmsb-link ul li a span {
+        font-size: 17px;
+    }
+}
+
+/*以上为首页代码*/
+
+.items-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.items-box .top-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.items-box .top-header h3 {
+    display: flex;
+    /*align-items: center;*/
+    color: #000000;
+    font-size: .5rem;
+}
+
+.items {
+    background-color: #ffffff;
+    width: 90%;
+    height: 6.1rem;
+    border: 0.5px solid #d2d2d2;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    margin-top: 0.3rem;
+}
+
+.items-banner {
+    width: 90%;
+    height: 4.0rem;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    margin-top: 0.3rem;
+}
+
+.items .top, .items-banner .top {
+    background-color: #725b45;
+    background-size: 104%;
+    background-repeat: no-repeat;
+    background-position: 0;
+    height: 3.7rem;
+    padding: 0.54rem 0 0 0.54rem;
+    box-sizing: border-box;
+}
+
+.items .top h3 {
+    font-size: 0.45rem;
+    color: #ffffff;
+}
+
+.items .footer {
+    background-color: #cab2c2;
+    height: 2.5rem;
+    padding: 0.28rem 0 0 0.54rem;
+    box-sizing: border-box;
+}
+
+.f-bg {
+    background-color: #2f384b !important;
+}
+
+.f-bg2 {
+    background-color: #e07c7c !important;
+}
+
+.f-bg3 {
+    background-color: #357b5c !important;
+}
+
+.items .footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.items .footer .f-top {
+    display: flex;
+
+}
+
+.items .footer .f-top a {
+    font-size: 0.16rem;
+    color: #ded7da;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 0.08rem;
+    margin: 0 0.05rem;
+    border-radius: 0.06rem;
+}
+
+.items .footer .f-top .a-active {
+    color: #e98342;
+}
+
+.f-footer {
+    display: flex;
+    align-items: center;
+    margin-top: 0.2rem;
+}
+
+.f-footer span {
+    font-size: 0.42rem;
+
+    color: #ffffff;
+    margin-left: 0.2rem;
+
+}
+
+.avatar-c {
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    border: 1px solid #ccc;
+    border-radius: 0.2rem;
+    overflow: hidden;
+}
+
+.avatar-c img {
+    width: 100%;
+    height: 100%;
+}
+
+.f-footer a {
+    border-radius: 0.2rem;
+    font-size: 0.34rem;
+    color: #fff;
+    display: block;
+    box-sizing: border-box;
+    padding: 0.1rem 0.4rem;
+    background: rgba(255, 255, 255, 0.3);
+    margin-left: 1.6rem;
+}
+
+/*以下代码为旗下站点页面样式*/
+.items2 {
+    background-color: #cbcbcb;
+    width: 90%;
+    height: 4.1rem;
+    border: 0.5px solid #d2d2d2;
+    border-radius: 0.2rem;
+    overflow: hidden;
+    margin-top: 0.3rem;
+}
+
+.items2 .top {
+    background-color: #725b45;
+    background-size: 104%;
+    background-repeat: no-repeat;
+    background-position: 0;
+    height: 2.9rem;
+    padding: 0.54rem 0 0 0.54rem;
+    box-sizing: border-box;
+}
+
+.items2 .top h3 {
+    font-size: 0.45rem;
+    color: #ffffff;
+}
+
+.items2 .footer2 {
+    background-color: #d2d2d2;
+    height: 1.3rem;
+    padding: 0.3rem 0 0 0.2rem;
+    box-sizing: border-box;
+}
+
+.f2-bg2 {
+    background-color: #ef9ed4 !important;
+}
+
+
+.items2 .footer2 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.f-footer2 {
+    display: flex;
+    align-items: center;
+    /*margin-top: 0.2rem;*/
+}
+
+.f-footer2 span {
+    font-size: 0.48rem;
+    color: #000000;
+    font-weight: 600;
+}
+
+.f-footer2 a {
+    border-radius: 0.2rem;
+    font-size: 0.34rem;
+    color: #fff;
+    display: block;
+    box-sizing: border-box;
+    padding: 0.1rem 0.4rem;
+    background: rgba(255, 255, 255, 0.3);
+    margin-left: 1.6rem;
+}
+
+/*以上代码为旗下站点页面样式*/
+
+/*以下代码为友情链接界面样式*/
+.cnmsb-link-box {
+    display: table;
+    margin: 20px 0;
+    padding: 6px;
+    width: 100%;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box
+}
+
+.cnmsb-link-box a {
+    display: inline-block;
+    border: none !important;
+    width: calc((100% - 80px) / 4);
+    margin: 10px
+}
+
+.cnmsb-link-item {
+    width: 100%;
+    background-color: #f9b5b5;
+    border: 1.3px solid #ededed;
+    border-radius: 5px;
+    max-height: 300px;
+    display: inline-block;
+    box-shadow: 0 0 2px 0 rgba(172, 172, 172, .4);
+    box-sizing: border-box;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px
+}
+
+.cnmsb-link-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 8px 0 #d3d3d3
+}
+
+.cnmsb-link-avatar {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 5px 5px 0 0;
+    display: block;
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    -ms-border-radius: 5px 5px 0 0;
+    -o-border-radius: 5px 5px 0 0
+}
+
+.cnmsb-link-name {
+    text-align: center;
+    display: block;
+    font-size: 0.36rem;
+    margin: 5px 1px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap
+}
+
+@media (min-width: 450px) and (max-width: 768px) {
+    .cnmsb-link-box a {
+        width: calc((100% - 80px) / 3);
+        margin: 10px 13px
+    }
+}
+
+@media (max-width: 450px) {
+    .cnmsb-link-box a {
+        width: calc((100% - 80px) / 2);
+        margin: 10px 20px
+    }
+}
+
+/*以上代码为友情链接界面样式*/
+.list-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.iconfont-i {
+    font-size: 0.1rem !important;
+    color: #cfcecf;
+}
+
+.list-box li {
+    font-size: 0.35rem;
+    display: flex;
+    width: 7rem;
+    flex-direction: column;
+    color: #333;
+    margin: 0.2rem
+}
+
+.list-box li .top-header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+}
+
+.list-box .top-header h3 {
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size: .5rem;
+}
+
+.list-box .cnmsb-link ul li a span {
+    font-size: 16px;
+}
+
+.list-item li {
+    width: 100%;
+    padding-left: .3rem !important;
+    flex-direction: column;
+
+}
+
+.list-item li p {
+    display: flex;
+    align-items: center;
+    color: #000000;
+    font-size: .4rem;
+    padding: .1rem .7rem .1rem .2rem;
+}
+
+.list-item li i {
+    font-size: 0.1rem !important;
+    margin-right: 0.1rem;
+}
+
+.list-item .share a {
+    word-break: break-all;
+    color: #0038ff;
+}
+
+/*以下代码为壁纸页面图片边框样式*/
+.pic {
+    margin: 5px 0 5px 40px
+}
+
+.pic img {
+    width: 90%;
+    border: 2px solid #ef7474;
+    border-radius: 5px;
+    box-shadow: 4px 4px 10px #ffb0ea;
+}
+
+/*以下代码为登录界面样式*/
+.cnmsb-login {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    width: 260px;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+
+}
+
+.cnmsb-login h2 {
+    font-size: 20px;
+    margin: 0 0 30px;
+    padding: 0;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.cnmsb-login p {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 10px;
+    margin-top: 20px;
+    line-height: 10px;
+}
+
+.cnmsb-login .inputBox {
+    position: relative;
+}
+
+.cnmsb-login .inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(106, 238, 94);
+    outline: none;
+    background: transparent;
+}
+
+.cnmsb-login .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.cnmsb-login .inputBox input:focus ~ label,
+.cnmsb-login .inputBox input:valid ~ label {
+    top: -18px;
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
+}
+
+.cnmsb-login input[type="submit"] {
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #000;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+/*以上代码为登录界面样式*/
